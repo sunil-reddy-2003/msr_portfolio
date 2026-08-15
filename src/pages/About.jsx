@@ -1,53 +1,52 @@
 const EducationCard = ({ title, year, subtitle, score }) => {
     return (
-        <div className="w-full lg:w-[720px] p-4 my-4 rounded-md shadow-md hover:scale-105 duration-300 text-gray-800 bg-white/40">
-            <div className="flex flex-col lg:flex-row lg:justify-between px-2">
-                <div className="font-bold text-lg lg:text-xl tracking-widest">
+        <div className="glass-panel education-card">
+            <div>
+                <div className="education-title">
                     {title}
                 </div>
-                <div className="font-bold mt-2 lg:mt-0">
-                    {year}
-                </div>
-            </div>
 
-            <div className="px-4 text-sm italic font-semibold">
+            <div className="education-detail">
                 {subtitle}
             </div>
 
-            <div className="px-4 py-2 text-xs tracking-widest">
+            <div className="education-score">
                 {score}
             </div>
+            </div>
+            <div className="education-year">{year}</div>
         </div>
     );
 };
 
 const About = () => {
     return (
-        <div className="flex flex-col items-center min-h-screen px-4 md:px-10 lg:px-0 py-12">
+        <div className="page-shell">
 
-            <div className="w-full lg:w-[800px] my-10 bg-white/40 backdrop-blur-md shadow-md p-6 sm:p-8 rounded-2xl">
+            <section className="glass-panel intro-panel">
 
-                <h1 className="text-3xl lg:text-4xl font-extrabold tracking-wider text-slate-900">
+                <h1 className="section-heading">
                     About Me
                 </h1>
 
-                <p className="mt-6 text-base lg:text-lg font-medium text-slate-700 tracking-wider">
+                <p>
                     Computer Science student and full stack developer building scalable backend systems and modern web applications solving real-world problems.
                 </p>
 
-            </div>
+            </section>
 
-            <div className="w-full lg:w-[800px] my-6">
+            <section className="content-stack">
 
-                <h1 className="text-3xl lg:text-4xl font-black text-slate-900 px-4 py-2 tracking-wider">
+                <h1 className="section-heading">
                     Education
                 </h1>
 
+                <div className="education-list">
                 <EducationCard
                     title="Vellore Institute of Technology, Vellore"
                     year="2021 – 2026"
                     subtitle="Integrated M.Tech in Computer Science and Engineering"
-                    score="GPA : 8.32/10"
+                    score="CGPA : 8.38/10"
                 />
 
                 <EducationCard
@@ -63,8 +62,8 @@ const About = () => {
                     subtitle="Matriculation"
                     score="GPA : 9.8/10"
                 />
-
-            </div>
+                </div>
+            </section>
         </div>
     );
 };

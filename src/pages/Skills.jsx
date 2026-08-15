@@ -1,18 +1,18 @@
 const Skills = () => {
     return (
-        <div className="flex flex-col min-h-screen lg:h-screen px-4 sm:px-6 md:px-12 lg:px-24 py-12">
+        <div className="page-shell">
 
-            <h1 className=" text-3xl sm:text-4xl font-black text-gray-800 tracking-wider mb-10">
+            <h1 className="section-heading">
                 Technical Skills
             </h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="skills-grid">
 
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         Programming Languages
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>Java</p>
                         <p>JavaScript</p>
                         <p>Python</p>
@@ -21,11 +21,11 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         Frontend Development
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>React</p>
                         <p>Tailwind CSS</p>
                         <p>HTML</p>
@@ -33,11 +33,11 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         Backend Development
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>Spring Boot</p>
                         <p>Spring Security</p>
                         <p>Spring MVC</p>
@@ -46,11 +46,11 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         CS Fundamentals
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>Data Structures & Algorithms</p>
                         <p>OOP</p>
                         <p>DBMS</p>
@@ -58,20 +58,20 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         Databases 
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>MySQL</p>
                         <p>PostgreSQL</p>
                     </div>
                 </div>
-                <div className="p-6 rounded-xl shadow-md bg-white-20 hover:scale-105 hover:bg-white/30 transition duration-300">
-                    <h2 className="text-lg font-bold text-gray-800 mb-3">
+                <div className="glass-panel skill-card">
+                    <h2>
                         Tools
                     </h2>
-                    <div className="font-semibold text-slate-600 space-y-1">
+                    <div>
                         <p>Git / Github</p>
                         <p>Postman</p>
                         <p>Vercel</p>
