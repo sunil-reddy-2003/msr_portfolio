@@ -7,33 +7,23 @@ import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
-import GradientWaves from './components/GradientWaves';
+import LightRays from './components/LightRays';
 
 function App() {
   return (
     <div className="site-app relative min-h-screen overflow-x-hidden">
       <div className="site-waves fixed inset-0 z-0" aria-hidden="true">
-        <GradientWaves
-          horizonColor="#171220"
-          waveColor="#4D3A73"
-          crestColor="#9678C9"
-          speed={0.45}
-          amplitude={2.2}
-          waveScale={0.4}
-          waveRatio={0.9}
-          swell={35}
-          turbulence={60}
-          tilt={0.97}
-          zoom={1.05}
-          height={5.5}
-          fogDepth={15}
-          detail="medium"
-          brightness={1.0}
-          opacity={1.0}
-          mouseInteraction={true}
-          parallaxStrength={0.5}
-          grain={true}
-          grainIntensity={0.02}
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#f4f4f5"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays"
         />
       </div>
 

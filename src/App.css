@@ -3,7 +3,7 @@
 }
 
 .site-waves {
-  background: #120f17;
+  background: #0d0c11;
 }
 
 .app-content {
@@ -13,7 +13,7 @@
 
 .site-layout {
   min-height: 100vh;
-  color: #f8f7ff;
+  color: #f5f5f6;
 }
 
 .site-main {
@@ -27,15 +27,15 @@
 }
 
 .glass-panel {
-  border: 1px solid rgba(201, 181, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(
     135deg,
-    rgba(55, 44, 82, 0.72),
-    rgba(22, 18, 33, 0.78)
+    rgba(33, 33, 40, 0.78),
+    rgba(16, 16, 20, 0.82)
   );
   box-shadow:
-    0 24px 70px rgba(2, 1, 8, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 24px 70px rgba(0, 0, 0, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(24px) saturate(130%);
   -webkit-backdrop-filter: blur(24px) saturate(130%);
 }
@@ -51,16 +51,16 @@
   justify-content: space-between;
   gap: 1.25rem;
   overflow: hidden;
-  border: 1px solid rgba(201, 181, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.5rem;
   background: linear-gradient(
     110deg,
-    rgba(29, 24, 41, 0.9),
-    rgba(47, 37, 69, 0.64)
+    rgba(20, 20, 26, 0.92),
+    rgba(40, 40, 48, 0.62)
   );
   box-shadow:
-    0 20px 45px rgba(2, 1, 8, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 20px 45px rgba(0, 0, 0, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(26px) saturate(145%);
   -webkit-backdrop-filter: blur(26px) saturate(145%);
 }
@@ -72,7 +72,7 @@
   width: 38%;
   height: 400%;
   border-radius: 50%;
-  background: rgba(160, 133, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
   filter: blur(30px);
   content: '';
   pointer-events: none;
@@ -102,7 +102,7 @@
 
 .brand-block h2 {
   margin-top: 0.1rem;
-  color: rgba(237, 232, 255, 0.7);
+  color: rgba(226, 226, 232, 0.65);
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -117,7 +117,7 @@
 .nav-link {
   border-radius: 0.85rem;
   padding: 0.65rem 0.85rem;
-  color: rgba(237, 232, 255, 0.74);
+  color: rgba(214, 214, 220, 0.7);
   font-size: 0.875rem;
   font-weight: 650;
   transition:
@@ -135,13 +135,13 @@
   background: rgba(255, 255, 255, 0.09);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 8px 22px rgba(4, 2, 10, 0.16);
+    0 8px 22px rgba(0, 0, 0, 0.26);
 }
 
 .nav-toggle {
   display: none;
   margin-right: 0.85rem;
-  border: 1px solid rgba(201, 181, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 0.75rem;
   padding: 0.5rem 0.6rem;
   color: #fff;
@@ -160,7 +160,7 @@
 }
 
 .hero-eyebrow {
-  color: #d8ccff;
+  color: #d1d1d6;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 700;
 }
@@ -168,7 +168,7 @@
 .hero-title {
   max-width: 10ch;
   margin: 0.75rem 0 1.25rem;
-  color: #fff;
+  color: #d4d4d8;
   font-size: clamp(3.25rem, 7vw, 6.5rem);
   font-weight: 800;
   letter-spacing: -0.065em;
@@ -177,12 +177,12 @@
 
 .hero-title span {
   display: block;
-  color: #bda5ff;
+  color: #c9c9cf;
 }
 
 .hero-description {
   max-width: 41rem;
-  color: rgba(238, 234, 255, 0.76);
+  color: rgba(220, 220, 226, 0.76);
   font-size: clamp(1rem, 2vw, 1.16rem);
   font-weight: 500;
   line-height: 1.7;
@@ -190,7 +190,7 @@
 
 .skill-line {
   margin-top: 1.25rem;
-  color: #f3efff;
+  color: #e4e4e8;
   font-size: 0.875rem;
   font-weight: 650;
   letter-spacing: 0.03em;
@@ -221,17 +221,17 @@
 }
 
 .primary-action {
-  border: 1px solid rgba(224, 216, 255, 0.5);
-  background: #f8f7ff;
-  color: #1b1528;
-  box-shadow: 0 14px 28px rgba(3, 2, 9, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #efeff1;
+  color: #16161b;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
 }
 
 .secondary-action,
 .project-action {
-  border: 1px solid rgba(201, 181, 255, 0.2);
-  background: rgba(30, 24, 45, 0.64);
-  color: #f8f7ff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(25, 25, 31, 0.76);
+  color: #f3f3f5;
 }
 
 .primary-action:hover,
@@ -241,13 +241,13 @@
 }
 
 .primary-action:hover {
-  background: #ddd2ff;
+  background: #ffffff;
 }
 
 .secondary-action:hover,
 .project-action:hover {
-  border-color: rgba(207, 189, 255, 0.48);
-  background: rgba(90, 70, 132, 0.58);
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(58, 58, 68, 0.68);
 }
 
 /* =========================================================
@@ -284,7 +284,7 @@
 
 .section-heading {
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: #ececf0;
   font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -292,7 +292,7 @@
 
 .section-kicker {
   margin-bottom: 0.65rem;
-  color: #cbbaff;
+  color: #c6c6cc;
   font-size: 0.75rem;
   font-weight: 750;
   letter-spacing: 0.13em;
@@ -306,7 +306,7 @@
 
 .intro-panel p {
   max-width: 50rem;
-  color: rgba(238, 234, 255, 0.8);
+  color: rgba(220, 220, 226, 0.8);
   font-size: clamp(1rem, 2vw, 1.18rem);
   font-weight: 500;
   line-height: 1.7;
@@ -338,11 +338,11 @@
 .project-card:hover,
 .contact-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(205, 184, 255, 0.38);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .education-title {
-  color: #fff;
+  color: #ededf1;
   font-size: 1.05rem;
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -351,12 +351,12 @@
 .education-detail,
 .education-score {
   margin-top: 0.4rem;
-  color: rgba(238, 234, 255, 0.7);
+  color: rgba(218, 218, 224, 0.68);
   font-size: 0.875rem;
 }
 
 .education-year {
-  color: #ded4ff;
+  color: #dedee2;
   font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
@@ -379,14 +379,14 @@
 }
 
 .skill-card h2 {
-  color: #fff;
+  color: #ededf1;
   font-size: 1rem;
   font-weight: 750;
 }
 
 .skill-card div {
   margin-top: 1rem;
-  color: rgba(238, 234, 255, 0.72);
+  color: rgba(218, 218, 224, 0.72);
   font-size: 0.9rem;
   font-weight: 550;
   line-height: 1.8;
@@ -419,7 +419,7 @@
 }
 
 .project-body h2 {
-  color: #fff;
+  color: #ededf1;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 750;
   line-height: 1.35;
@@ -427,7 +427,7 @@
 
 .project-description {
   margin-top: 1rem;
-  color: rgba(238, 234, 255, 0.73);
+  color: rgba(218, 218, 224, 0.74);
   font-size: 0.9rem;
   line-height: 1.65;
 }
@@ -444,11 +444,11 @@
 }
 
 .technology-list span {
-  border: 1px solid rgba(201, 181, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
-  background: rgba(150, 117, 237, 0.17);
+  background: rgba(255, 255, 255, 0.08);
   padding: 0.35rem 0.6rem;
-  color: #e7dfff;
+  color: #dedee3;
   font-size: 0.72rem;
   font-weight: 650;
 }
@@ -477,20 +477,20 @@
 }
 
 .contact-card i {
-  color: #c7b5ff;
+  color: #cfcfd5;
   font-size: 1.8rem;
 }
 
 .contact-card h1 {
   margin-top: 1rem;
-  color: #fff;
+  color: #ededf1;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .contact-closing {
   margin-top: 2rem;
-  color: rgba(238, 234, 255, 0.72);
+  color: rgba(218, 218, 224, 0.72);
   text-align: center;
 }
 
@@ -607,7 +607,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(159, 142, 223, 0.28);
+  background: rgba(220, 220, 225, 0.1);
   border-radius: 15px;
   pointer-events: none;
   z-index: 1;
