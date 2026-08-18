@@ -161,7 +161,7 @@
 
 .hero-eyebrow {
   color: #d1d1d6;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
   font-weight: 700;
 }
 
