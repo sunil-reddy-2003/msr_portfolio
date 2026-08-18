@@ -161,7 +161,7 @@
 
 .hero-eyebrow {
   color: #d1d1d6;
-  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 700;
 }
 
@@ -612,4 +612,40 @@
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: color;
+}
+
+/* React Bits GooeyNav effect layered behind the existing router links. */
+.nav-links {
+  --color-1: #ffffff;
+  --color-2: #ffffff;
+  --color-3: #ffffff;
+  --color-4: #ffffff;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.nav-links .nav-link {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-links .gooey-nav-effect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.nav-links.gooey-active .nav-link.active {
+  color: #111116;
+  text-shadow: none;
+}
+
+.site-main {
+  overflow: hidden;
+}
+
+.page-transition {
+  will-change: transform;
 }

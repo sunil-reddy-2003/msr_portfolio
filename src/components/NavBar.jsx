@@ -1,9 +1,22 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import GooeyNav from "./GooeyNav/GooeyNav";
+
+const particleDistances = [90, 10];
+const particleColors = [1, 2, 3, 1, 2, 3, 1, 4];
 
 const NavBar = () => {
     const navigate = useNavigate();
+    const navLinksRef = useRef(null);
     const [show, setShow] = useState(false);
+    const [effectTarget, setEffectTarget] = useState(null);
+    const [effectKey, setEffectKey] = useState(0);
+
+    const handleNavItemClick = (event) => {
+        setEffectTarget(event.currentTarget);
+        setEffectKey((key) => key + 1);
+        setShow(false);
+    };
 
     return (
         <nav className="liquid-nav">
@@ -24,41 +37,53 @@ const NavBar = () => {
             </button>
 
             <div
+                ref={navLinksRef}
                 className={`nav-links ${show ? "open" : ""}`}
             >
+                <GooeyNav
+                    containerRef={navLinksRef}
+                    targetElement={effectTarget}
+                    trigger={effectKey}
+                    particleCount={5}
+                    particleDistances={particleDistances}
+                    particleR={100}
+                    animationTime={600}
+                    timeVariance={200}
+                    colors={particleColors}
+                />
                 <NavLink
                     to="/"
                     end
                     className="nav-link"
-                    onClick={() => setShow(false)}
+                    onClick={handleNavItemClick}
                 >
                     Home
                 </NavLink>
                 <NavLink
                     to="/about"
                     className="nav-link"
-                    onClick={() => setShow(false)}
+                    onClick={handleNavItemClick}
                 >
                     About
                 </NavLink>
                 <NavLink
                     to="/skills"
                     className="nav-link"
-                    onClick={() => setShow(false)}
+                    onClick={handleNavItemClick}
                 >
                     Skills
                 </NavLink>
                 <NavLink
                     to="/projects"
                     className="nav-link"
-                    onClick={() => setShow(false)}
+                    onClick={handleNavItemClick}
                 >
                     Projects
                 </NavLink>
                 <NavLink
                     to="/contact"
                     className="nav-link"
-                    onClick={() => setShow(false)}
+                    onClick={handleNavItemClick}
                 >
                     Contact
                 </NavLink>

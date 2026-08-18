@@ -2,7 +2,6 @@ import profile from "../assets/sunil.png";
 import TextType from "../components/TextType";
 import TiltedCard from "../components/TiltedCard";
 
-
 const Home = () => {
   return (
     <div className="page-shell">
@@ -46,14 +45,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div className="profile-column">
-        <div className="profile-frame">
-          <img
-          src={profile}
-          alt="Sunil Reddy M"
-          />
-        </div>
-      </div> */}
         <div className="profile-column">
           <TiltedCard
             imageSrc={profile}
