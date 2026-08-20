@@ -1,10 +1,11 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import GooeyNav from "./GooeyNav/GooeyNav";
 
 const particleDistances = [90, 10];
 const particleColors = [1, 2, 3, 1, 2, 3, 1, 4];
 const navigationItems = [
+    { label: "Home", to: "/", end: true },
     { label: "About", to: "/about" },
     { label: "Skills", to: "/skills" },
     { label: "Projects", to: "/projects" },
@@ -14,6 +15,7 @@ const navigationItems = [
 
 const NavBar = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const navLinksRef = useRef(null);
     const [show, setShow] = useState(false);
     const [effectTarget, setEffectTarget] = useState(null);
@@ -71,7 +73,17 @@ const NavBar = () => {
                         key={item.to}
                         to={item.to}
                         end={item.end}
-                        className="nav-link"
+                        className={({ isActive }) => {
+                            const isEducationLink = item.to === "/about#education";
+                            const isAboutLink = item.to === "/about";
+                            const isCurrent = isEducationLink
+                                ? location.pathname === "/about" && location.hash === "#education"
+                                : isAboutLink
+                                  ? location.pathname === "/about" && location.hash !== "#education"
+                                  : isActive;
+
+                            return `nav-link${isCurrent ? " active" : ""}`;
+                        }}
                         onClick={handleNavItemClick}
                         style={{ "--menu-index": index }}
                     >

@@ -141,6 +141,15 @@ const Resume = () => {
             <li><strong>Hobbies & Interests:</strong> Full Stack Application Development, Coding, Traveling</li>
           </ul>
         </ResumeSection>
+          <a
+            className="resume-download"
+            href="/Sunil%20Reddy%20M.pdf"
+            download="Sunil-Reddy-Mandadi-Resume.pdf"
+            aria-label="Download Sunil Reddy Mandadi resume as a PDF"
+          >
+            <i className="fa-solid fa-download" aria-hidden="true" />
+            <span>Download Resume</span>
+          </a>
         </article>
       </div>
     </main>

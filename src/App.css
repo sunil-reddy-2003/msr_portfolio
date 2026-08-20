@@ -984,3 +984,156 @@
 #education {
   scroll-margin-top: 8rem;
 }
+
+.resume-download {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.82rem 1.1rem;
+  background: rgba(24, 24, 30, 0.9);
+  box-shadow: 0 0.85rem 2.2rem rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.resume-download:hover,
+.resume-download:focus-visible {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(52, 52, 62, 0.94);
+  transform: translateY(-0.15rem);
+}
+
+.resume-download i {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 540px) {
+  .resume-download span {
+    display: none;
+  }
+
+  .resume-download {
+    width: 2.9rem;
+    height: 2.9rem;
+    justify-content: center;
+    padding: 0;
+  }
+}
+/* Make technology labels and project actions immediately distinguishable. */
+.technology-list span {
+  border-color: rgba(157, 122, 255, 0.46);
+  background: linear-gradient(135deg, rgba(118, 81, 198, 0.32), rgba(55, 85, 172, 0.22));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #e9e3ff;
+}
+
+.project-action {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: #f4f4f6;
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.24);
+  color: #17171c;
+}
+
+.project-action:hover,
+.project-action:focus-visible {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #09090c;
+}
+/* Theme-matched interactive states. */
+.skill-card {
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(157, 143, 184, 0.5);
+  background: linear-gradient(145deg, rgba(58, 51, 73, 0.8), rgba(23, 22, 30, 0.88));
+  box-shadow: 0 1rem 2.2rem rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(218, 211, 236, 0.09);
+}
+
+.skill-card:hover h2 {
+  color: #f0edf6;
+}
+
+.skill-card:hover div {
+  color: #d4cede;
+}
+
+.project-action {
+  border-color: rgba(145, 133, 171, 0.5);
+  background: rgba(42, 38, 54, 0.9);
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(235, 230, 248, 0.07);
+  color: #e8e4ee;
+}
+
+.project-action:hover,
+.project-action:focus-visible {
+  border-color: rgba(187, 174, 215, 0.72);
+  background: #514967;
+  color: #fbfaff;
+}
+
+.resume-document {
+  position: relative;
+}
+
+.resume-document .resume-download {
+  position: fixed;
+  top: auto;
+  right: max(1rem, calc((100vw - 210mm) / 2 + 1.25rem));
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  border: 0.09em solid #6e667d;
+  border-radius: 999px;
+  padding: 0.72em 1em;
+  background: #2d2937;
+  box-shadow: 0 0.45em 1em rgba(25, 22, 31, 0.16);
+  color: #f6f3fa;
+  font-size: 0.92em;
+  font-weight: 700;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.resume-document .resume-download:hover,
+.resume-document .resume-download:focus-visible {
+  border-color: #8f849f;
+  background: #494154;
+  color: #ffffff;
+  transform: translateY(-0.12em);
+}
+
+.resume-document .resume-download i {
+  font-size: 1em;
+}
+
+@media (max-width: 540px) {
+  .resume-document .resume-download {
+    width: auto;
+    height: auto;
+    justify-content: initial;
+    padding: 0.72em 1em;
+  }
+
+  .resume-document .resume-download span {
+    display: inline;
+  }
+}
+
+@media print {
+  .resume-document .resume-download {
+    display: none;
+  }
+}
