@@ -1137,3 +1137,11 @@
     display: none;
   }
 }
+@media (max-width: 600px) {
+  .resume-document .resume-download {
+    position: absolute;
+    top: min(78%, 450px);
+    right: 3.05em;
+    bottom: auto;
+  }
+}
