@@ -649,3 +649,338 @@
 .page-transition {
   will-change: transform;
 }
+/* =========================================================
+   RESUME / A4 PRINT DOCUMENT
+   ========================================================= */
+.resume-page {
+  display: grid;
+  min-height: 100svh;
+  place-items: start center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: #edf0f3;
+  color: #141414;
+}
+
+.resume-scaler {
+  container-type: inline-size;
+  width: min(100%, 210mm);
+}
+.resume-document {
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 210 / 297;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 3em 3.05em;
+  background: #fff;
+  box-shadow: 0 0.5rem 2.25rem rgba(15, 23, 42, 0.16);
+  color: #161616;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.42cqw;
+  line-height: 1.16;
+}
+
+.resume-header {
+  border-bottom: 0.09em solid #a7a7a7;
+  padding-bottom: 0.32em;
+  text-align: center;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: 1.93em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2em 0.55em;
+  margin: 0.42em 0 0;
+  font-size: 0.94em;
+  line-height: 1.25;
+}
+
+.resume-contact a {
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-contact a:hover,
+.resume-contact a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.resume-contact i {
+  margin-right: 0.13em;
+  font-size: 0.87em;
+}
+
+.resume-section {
+  margin-top: 0.6em;
+}
+
+.resume-section h2 {
+  margin: 0 0 0.35em;
+  border-bottom: 0.09em solid #aeaeae;
+  padding-bottom: 0.16em;
+  font-size: 1.18em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.resume-summary {
+  margin: 0;
+  text-align: justify;
+}
+
+.resume-education,
+.resume-skills,
+.resume-additional,
+.resume-project ul {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.resume-education,
+.resume-skills,
+.resume-additional {
+  list-style: none;
+}
+
+.resume-education {
+  display: grid;
+  gap: 0.22em;
+}
+
+.resume-education li,
+.resume-skills li,
+.resume-additional li,
+.resume-project {
+  position: relative;
+}
+
+.resume-education li::before,
+.resume-skills li::before,
+.resume-additional li::before,
+.resume-project::before {
+  position: absolute;
+  left: -0.9em;
+  color: #111;
+  content: "•";
+  font-size: 1em;
+  line-height: 1.05;
+}
+
+.resume-education li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1em;
+}
+
+.resume-education strong,
+.resume-project h3,
+.resume-skills strong,
+.resume-additional strong,
+.resume-project strong {
+  font-weight: 700;
+}
+
+.resume-education p {
+  margin: 0.06em 0 0;
+}
+
+.resume-education time,
+.resume-project time {
+  font-size: 0.91em;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.resume-skills {
+  display: grid;
+  gap: 0.17em;
+}
+
+.resume-projects {
+  display: grid;
+  gap: 0.35em;
+  padding-left: 1em;
+}
+
+.resume-project-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.resume-project h3 {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.15;
+}
+
+.resume-project ul {
+  margin-top: 0.08em;
+  list-style: none;
+}
+
+.resume-project li + li {
+  margin-top: 0.06em;
+}
+
+.resume-project p {
+  margin: 0.09em 0 0 1em;
+}
+
+.resume-additional {
+  display: grid;
+  gap: 0.17em;
+}
+
+@media (max-width: 800px) {
+  .liquid-nav {
+    overflow: visible;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-right: 0.85rem;
+    padding: 0;
+  }
+
+  .nav-toggle-icon {
+    display: grid;
+    width: 1.15rem;
+    gap: 0.27rem;
+  }
+
+  .nav-toggle-icon span {
+    display: block;
+    width: 100%;
+    height: 0.11rem;
+    border-radius: 999px;
+    background: currentColor;
+    transform-origin: center;
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease;
+  }
+
+  .nav-toggle.is-open .nav-toggle-icon span:nth-child(1) {
+    transform: translateY(0.38rem) rotate(45deg);
+  }
+
+  .nav-toggle.is-open .nav-toggle-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0.4);
+  }
+
+  .nav-toggle.is-open .nav-toggle-icon span:nth-child(3) {
+    transform: translateY(-0.38rem) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.75rem;
+    right: 1rem;
+    left: 1rem;
+    z-index: 30;
+    display: flex;
+    min-height: min(28rem, calc(100svh - 7rem));
+    width: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.4rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1.5rem;
+    padding: 1.1rem;
+    background: linear-gradient(145deg, rgba(27, 27, 34, 0.98), rgba(13, 12, 17, 0.98));
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.75rem) scale(0.985);
+    visibility: hidden;
+    transition: opacity 220ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 700ms;
+  }
+
+  .nav-links .gooey-nav-effect {
+    display: none;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+    transition: opacity 220ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0s;
+  }
+
+  .nav-links .nav-link {
+    z-index: 1;
+    border-radius: 0.9rem;
+    padding: 0.92rem 1rem;
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition: opacity 260ms cubic-bezier(0.22, 1, 0.36, 1), transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc((var(--menu-item-count) - var(--menu-index) - 1) * 90ms);
+  }
+
+  .nav-links.open .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--menu-index) * 105ms + 80ms);
+  }
+
+  .nav-links .nav-link.active {
+    background: rgba(255, 255, 255, 0.11);
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-page {
+    padding: 0;
+  }
+
+  .resume-document {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .site-waves {
+    display: none;
+  }
+
+  .resume-page {
+    padding: 0;
+    background: #fff;
+  }
+
+  .resume-scaler {
+    width: 210mm;
+  }
+
+  .resume-document {
+    box-shadow: none;
+  }
+}
+#education {
+  scroll-margin-top: 8rem;
+}

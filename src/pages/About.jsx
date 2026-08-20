@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const EducationCard = ({ title, year, subtitle, score }) => {
     return (
         <div className="glass-panel education-card">
@@ -35,7 +38,7 @@ const About = () => {
 
             </section>
 
-            <section className="content-stack">
+            <section id="education" className="content-stack">
 
                 <h1 className="section-heading">
                     Education

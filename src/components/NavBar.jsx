@@ -4,6 +4,13 @@ import GooeyNav from "./GooeyNav/GooeyNav";
 
 const particleDistances = [90, 10];
 const particleColors = [1, 2, 3, 1, 2, 3, 1, 4];
+const navigationItems = [
+    { label: "About", to: "/about" },
+    { label: "Skills", to: "/skills" },
+    { label: "Projects", to: "/projects" },
+    { label: "Education", to: "/about#education" },
+    { label: "Contact", to: "/contact" },
+];
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -29,16 +36,24 @@ const NavBar = () => {
             </div>
 
             <button
-                className="nav-toggle"
-                onClick={() => setShow((prev) => !prev)}
-                aria-label="Toggle menu"
+                className={`nav-toggle ${show ? "is-open" : ""}`}
+                onClick={() => setShow((previous) => !previous)}
+                aria-label={show ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={show}
+                aria-controls="primary-navigation"
             >
-                <i className="fa-solid fa-bars"></i>
+                <span className="nav-toggle-icon" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                </span>
             </button>
 
             <div
+                id="primary-navigation"
                 ref={navLinksRef}
                 className={`nav-links ${show ? "open" : ""}`}
+                style={{ "--menu-item-count": navigationItems.length }}
             >
                 <GooeyNav
                     containerRef={navLinksRef}
@@ -51,42 +66,18 @@ const NavBar = () => {
                     timeVariance={200}
                     colors={particleColors}
                 />
-                <NavLink
-                    to="/"
-                    end
-                    className="nav-link"
-                    onClick={handleNavItemClick}
-                >
-                    Home
-                </NavLink>
-                <NavLink
-                    to="/about"
-                    className="nav-link"
-                    onClick={handleNavItemClick}
-                >
-                    About
-                </NavLink>
-                <NavLink
-                    to="/skills"
-                    className="nav-link"
-                    onClick={handleNavItemClick}
-                >
-                    Skills
-                </NavLink>
-                <NavLink
-                    to="/projects"
-                    className="nav-link"
-                    onClick={handleNavItemClick}
-                >
-                    Projects
-                </NavLink>
-                <NavLink
-                    to="/contact"
-                    className="nav-link"
-                    onClick={handleNavItemClick}
-                >
-                    Contact
-                </NavLink>
+                {navigationItems.map((item, index) => (
+                    <NavLink
+                        key={item.to}
+                        to={item.to}
+                        end={item.end}
+                        className="nav-link"
+                        onClick={handleNavItemClick}
+                        style={{ "--menu-index": index }}
+                    >
+                        {item.label}
+                    </NavLink>
+                ))}
             </div>
         </nav>
     );
