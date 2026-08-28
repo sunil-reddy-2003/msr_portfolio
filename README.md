@@ -9,7 +9,7 @@
 ## 🌐 Live Portfolio
 
 🔗 **Portfolio Website:**
-https://sunil-portfolio-theta-five.vercel.app/
+https://sunilreddy-taupe.vercel.app/
 
 ---
 
@@ -159,7 +159,7 @@ Python • PyTorch • FAISS • OpenCV • Torchaudio • Gradio
 
 **Vellore Institute of Technology, Vellore** <br />
 Integrated M.Tech in Computer Science & Engineering (2021–2026) <br />
-GPA: 8.32/10
+GPA: 8.38/10
 
 <br />
 
