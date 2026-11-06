@@ -18,8 +18,8 @@ const education = [
 
 const skills = [
   ["Programming Languages", "Java, JavaScript, Python, C, SQL"],
-  ["Frontend", "React.js, HTML, CSS, Tailwind CSS"],
-  ["Backend", "Spring Boot, Spring MVC, Spring Security, Microservices, REST APIs, JWT"],
+  ["Frontend", "React.js, HTML, CSS, Tailwind CSS, Axios"],
+  ["Backend", "Spring Boot, Spring MVC, Spring Security, Microservices, REST APIs, JWT, Apache Kafka, Zookeeper"],
   ["Databases", "MySQL, PostgreSQL"],
   ["CS Fundamentals", "Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems"],
   ["Machine Learning & Data", "Machine Learning, Deep Learning, Data Preprocessing, TensorFlow, Scikit-learn, NumPy, Pandas"],
@@ -33,9 +33,9 @@ const projects = [
     date: "March 2026",
     points: [
       "Built a full stack e-commerce platform with JWT based authentication and role access.",
-      "Designed REST APIs in Spring Boot backed by PostgreSQL, integrated with React frontend.",
+      "Designed REST APIs in Spring Boot backed by PostgreSQL, with Kafka handling order processing, inventory reservation, and automated email notifications, integrated with a React frontend.",
     ],
-    tech: "React.js, Spring Boot, Spring Security, JWT, PostgreSQL, Tailwind CSS, REST APIs, Axios",
+    tech: "React.js, Spring Boot, Microservices, Apache Kafka, Zookeeper, Spring Security, JWT, PostgreSQL, Tailwind CSS, REST APIs, Axios",
   },
   {
     title: "Flight Booking System (Backend – Microservices)",
@@ -85,14 +85,14 @@ const Resume = () => {
             <a href="tel:+919494999410"><i className="fa-solid fa-phone" aria-hidden="true" /> +91-9494999410</a>
             <a href="https://www.linkedin.com/in/sunilreddy2003" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin" aria-hidden="true" /> sunil-reddy</a>
             <a href="https://github.com/sunil-reddy-2003" target="_blank" rel="noreferrer"><i className="fa-brands fa-github" aria-hidden="true" /> sunil-reddy</a>
-            <a href="/" aria-label="Open portfolio home"><i className="fa-solid fa-briefcase" aria-hidden="true" /> portfolio</a>
+            <a href="https://sunilreddy-taupe.vercel.app/" target="_blank" rel="noreferrer"><i className="fa-solid fa-briefcase" aria-hidden="true" /> portfolio</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Nalgonda%2C+India" target="_blank" rel="noreferrer"><i className="fa-solid fa-location-dot" aria-hidden="true" /> Nalgonda, India</a>
           </p>
         </header>
 
         <ResumeSection title="Profile Summary">
           <p className="resume-summary">
-            Full stack developer with strong backend skills in Java, Spring Boot, and PostgreSQL, and academic exposure to React for frontend development. Comfortable across the stack, from database design to deployment, with exposure to deep learning for retrieval systems. Adapts quickly and delivers reliable work.
+            Full stack developer strong in Java, Spring Boot, PostgreSQL, React, and JavaScript. Comfortable across the stack, from designing the database to building the interface and getting it deployed, with some hands on work in deep learning for retrieval systems. Picks up new tools quickly and cares about shipping work that actually holds up.
           </p>
         </ResumeSection>
 
@@ -137,15 +137,15 @@ const Resume = () => {
 
         <ResumeSection title="Certifications & Additional Information">
           <ul className="resume-additional">
-            <li><strong>Certifications:</strong> Microsoft Azure AI Fundamentals</li>
+            <li><strong>Certifications:</strong> <a href="https://www.credly.com/badges/63659903-1469-4ef8-b299-a43cf0b25263/public_url" target="_blank" rel="noreferrer">Microsoft Azure AI Fundamentals</a></li>
             <li><strong>Hobbies & Interests:</strong> Full Stack Application Development, Coding, Traveling</li>
           </ul>
         </ResumeSection>
           <a
             className="resume-download"
             href="/Sunil%20Reddy%20M.pdf"
-            download="Sunil-Reddy-Mandadi-Resume.pdf"
-            aria-label="Download Sunil Reddy Mandadi resume as a PDF"
+            download="Sunil-Reddy-M-Resume.pdf"
+            aria-label="Download Sunil Reddy's resume as a PDF"
           >
             <i className="fa-solid fa-download" aria-hidden="true" />
             <span>Download Resume</span>

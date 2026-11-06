@@ -710,8 +710,15 @@
   white-space: nowrap;
 }
 
+.resume-additional a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .resume-contact a:hover,
-.resume-contact a:focus-visible {
+.resume-contact a:focus-visible,
+.resume-additional a:hover,
+.resume-additional a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 0.12em;
 }
