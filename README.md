@@ -9,9 +9,8 @@
 ## 🌐 Live Portfolio
 
 🔗 **Portfolio Website:**
-https://sunilreddy-taupe.vercel.app/
-
----
+- https://sunilreddy-taupe.vercel.app/
+- https://sunilreddy.is-a.dev/
 
 ## 🧑‍💻 About Me
 
