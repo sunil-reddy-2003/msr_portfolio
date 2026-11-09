@@ -43,6 +43,7 @@ const Skills = () => {
                         <p>Spring MVC</p>
                         <p>Microservices</p>
                         <p>JWT</p>
+                        <p>Apache Kafka</p>
                     </div>
                 </div>
 
@@ -65,6 +66,7 @@ const Skills = () => {
                     <div>
                         <p>MySQL</p>
                         <p>PostgreSQL</p>
+                        <p>Redis Cache</p>
                     </div>
                 </div>
                 <div className="glass-panel skill-card">
